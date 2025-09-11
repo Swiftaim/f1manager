@@ -1,5 +1,0 @@
-if(EXISTS "E:/Code/cpp/RaceManager/build/tests/f1tm_tests-b12d07c_tests.cmake")
-  include("E:/Code/cpp/RaceManager/build/tests/f1tm_tests-b12d07c_tests.cmake")
-else()
-  add_test(f1tm_tests_NOT_BUILT-b12d07c f1tm_tests_NOT_BUILT-b12d07c)
-endif()
