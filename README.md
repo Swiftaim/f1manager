@@ -1,3 +1,5 @@
+![CMake (Windows MSVC)](https://github.com/swiftaim/f1manager/actions/workflows/cmake-msvc.yml/badge.svg)
+
 # F1 Team Manager Simulator (Dev Notes)
 
 ## Developer CLI: `cpp`
