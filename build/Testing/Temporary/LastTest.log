@@ -1,0 +1,563 @@
+Start testing: Sep 10 22:11 Västeuropa, sommartid
+----------------------------------------------------------
+1/28 Testing: SnapshotBuffer publishes and consumes latest
+1/28 Test: SnapshotBuffer publishes and consumes latest
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "SnapshotBuffer publishes and consumes latest"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"SnapshotBuffer publishes and consumes latest" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "SnapshotBuffer publishes and consumes latest"
+Randomness seeded to: 3783406269
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"SnapshotBuffer publishes and consumes latest" end time: Sep 10 22:11 Västeuropa, sommartid
+"SnapshotBuffer publishes and consumes latest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/28 Testing: estimate_stint_time
+2/28 Test: estimate_stint_time
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "estimate_stint_time"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"estimate_stint_time" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "estimate_stint_time"
+Randomness seeded to: 4228584060
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"estimate_stint_time" end time: Sep 10 22:11 Västeuropa, sommartid
+"estimate_stint_time" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/28 Testing: simulate_lane_factors matches mapping via lane_factors_from_events
+3/28 Test: simulate_lane_factors matches mapping via lane_factors_from_events
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "simulate_lane_factors matches mapping via lane_factors_from_events"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"simulate_lane_factors matches mapping via lane_factors_from_events" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "simulate_lane_factors matches mapping via lane_factors_from_events"
+Randomness seeded to: 3516647540
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"simulate_lane_factors matches mapping via lane_factors_from_events" end time: Sep 10 22:11 Västeuropa, sommartid
+"simulate_lane_factors matches mapping via lane_factors_from_events" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/28 Testing: race_time_with_pits: adds pit loss between stints
+4/28 Test: race_time_with_pits: adds pit loss between stints
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "race_time_with_pits: adds pit loss between stints"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"race_time_with_pits: adds pit loss between stints" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "race_time_with_pits: adds pit loss between stints"
+Randomness seeded to: 3588012748
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"race_time_with_pits: adds pit loss between stints" end time: Sep 10 22:11 Västeuropa, sommartid
+"race_time_with_pits: adds pit loss between stints" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/28 Testing: pit_stop_loss
+5/28 Test: pit_stop_loss
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "pit_stop_loss"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"pit_stop_loss" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "pit_stop_loss"
+Randomness seeded to: 3453639878
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"pit_stop_loss" end time: Sep 10 22:11 Västeuropa, sommartid
+"pit_stop_loss" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/28 Testing: simulate_pit_events handles edges
+6/28 Test: simulate_pit_events handles edges
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "simulate_pit_events handles edges"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"simulate_pit_events handles edges" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "simulate_pit_events handles edges"
+Randomness seeded to: 762858209
+===============================================================================
+All tests passed (15 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"simulate_pit_events handles edges" end time: Sep 10 22:11 Västeuropa, sommartid
+"simulate_pit_events handles edges" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/28 Testing: InterpBuffer linear interpolation by sim_time
+7/28 Test: InterpBuffer linear interpolation by sim_time
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "InterpBuffer linear interpolation by sim_time"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"InterpBuffer linear interpolation by sim_time" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "InterpBuffer linear interpolation by sim_time"
+Randomness seeded to: 3609708366
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"InterpBuffer linear interpolation by sim_time" end time: Sep 10 22:11 Västeuropa, sommartid
+"InterpBuffer linear interpolation by sim_time" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/28 Testing: Time warp scales advancement linearly
+8/28 Test: Time warp scales advancement linearly
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "Time warp scales advancement linearly"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"Time warp scales advancement linearly" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "Time warp scales advancement linearly"
+Randomness seeded to: 457550184
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Time warp scales advancement linearly" end time: Sep 10 22:11 Västeuropa, sommartid
+"Time warp scales advancement linearly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/28 Testing: pit_stop_loss under SC and VSC
+9/28 Test: pit_stop_loss under SC and VSC
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "pit_stop_loss under SC and VSC"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"pit_stop_loss under SC and VSC" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "pit_stop_loss under SC and VSC"
+Randomness seeded to: 258600391
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"pit_stop_loss under SC and VSC" end time: Sep 10 22:11 Västeuropa, sommartid
+"pit_stop_loss under SC and VSC" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/28 Testing: lane_factors_from_events maps events via Track
+10/28 Test: lane_factors_from_events maps events via Track
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "lane_factors_from_events maps events via Track"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"lane_factors_from_events maps events via Track" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "lane_factors_from_events maps events via Track"
+Randomness seeded to: 4205526484
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"lane_factors_from_events maps events via Track" end time: Sep 10 22:11 Västeuropa, sommartid
+"lane_factors_from_events maps events via Track" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/28 Testing: track_catalog_from_csv_stream parses valid rows
+11/28 Test: track_catalog_from_csv_stream parses valid rows
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "track_catalog_from_csv_stream parses valid rows"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"track_catalog_from_csv_stream parses valid rows" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "track_catalog_from_csv_stream parses valid rows"
+Randomness seeded to: 2179238275
+===============================================================================
+All tests passed (8 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"track_catalog_from_csv_stream parses valid rows" end time: Sep 10 22:11 Västeuropa, sommartid
+"track_catalog_from_csv_stream parses valid rows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/28 Testing: Track: unknown key returns nullopt
+12/28 Test: Track: unknown key returns nullopt
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "Track: unknown key returns nullopt"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"Track: unknown key returns nullopt" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "Track: unknown key returns nullopt"
+Randomness seeded to: 1562941170
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Track: unknown key returns nullopt" end time: Sep 10 22:11 Västeuropa, sommartid
+"Track: unknown key returns nullopt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/28 Testing: Pause (scale 0) yields no advancement
+13/28 Test: Pause (scale 0) yields no advancement
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "Pause (scale 0) yields no advancement"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"Pause (scale 0) yields no advancement" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "Pause (scale 0) yields no advancement"
+Randomness seeded to: 2052803733
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Pause (scale 0) yields no advancement" end time: Sep 10 22:11 Västeuropa, sommartid
+"Pause (scale 0) yields no advancement" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/28 Testing: InterpBuffer clamps outside range
+14/28 Test: InterpBuffer clamps outside range
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "InterpBuffer clamps outside range"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"InterpBuffer clamps outside range" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "InterpBuffer clamps outside range"
+Randomness seeded to: 3415082132
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"InterpBuffer clamps outside range" end time: Sep 10 22:11 Västeuropa, sommartid
+"InterpBuffer clamps outside range" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/28 Testing: pit_stop_loss stochastic variance
+15/28 Test: pit_stop_loss stochastic variance
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "pit_stop_loss stochastic variance"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"pit_stop_loss stochastic variance" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "pit_stop_loss stochastic variance"
+Randomness seeded to: 3477512471
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"pit_stop_loss stochastic variance" end time: Sep 10 22:11 Västeuropa, sommartid
+"pit_stop_loss stochastic variance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/28 Testing: Track: lookup and pit helpers
+16/28 Test: Track: lookup and pit helpers
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "Track: lookup and pit helpers"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"Track: lookup and pit helpers" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "Track: lookup and pit helpers"
+Randomness seeded to: 1912495447
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Track: lookup and pit helpers" end time: Sep 10 22:11 Västeuropa, sommartid
+"Track: lookup and pit helpers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/28 Testing: InterpBuffer shortest-angle wrap around 2pi
+17/28 Test: InterpBuffer shortest-angle wrap around 2pi
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "InterpBuffer shortest-angle wrap around 2pi"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"InterpBuffer shortest-angle wrap around 2pi" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "InterpBuffer shortest-angle wrap around 2pi"
+Randomness seeded to: 378908509
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"InterpBuffer shortest-angle wrap around 2pi" end time: Sep 10 22:11 Västeuropa, sommartid
+"InterpBuffer shortest-angle wrap around 2pi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/28 Testing: race_time_with_track composes stints and track pits with events
+18/28 Test: race_time_with_track composes stints and track pits with events
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "race_time_with_track composes stints and track pits with events"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"race_time_with_track composes stints and track pits with events" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "race_time_with_track composes stints and track pits with events"
+Randomness seeded to: 1624155817
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"race_time_with_track composes stints and track pits with events" end time: Sep 10 22:11 Västeuropa, sommartid
+"race_time_with_track composes stints and track pits with events" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/28 Testing: simulate_pit_events changes with different seeds
+19/28 Test: simulate_pit_events changes with different seeds
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "simulate_pit_events changes with different seeds"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"simulate_pit_events changes with different seeds" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "simulate_pit_events changes with different seeds"
+Randomness seeded to: 3805582563
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"simulate_pit_events changes with different seeds" end time: Sep 10 22:11 Västeuropa, sommartid
+"simulate_pit_events changes with different seeds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/28 Testing: race_time_with_track validates sizes and event names
+20/28 Test: race_time_with_track validates sizes and event names
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "race_time_with_track validates sizes and event names"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"race_time_with_track validates sizes and event names" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "race_time_with_track validates sizes and event names"
+Randomness seeded to: 1822473891
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"race_time_with_track validates sizes and event names" end time: Sep 10 22:11 Västeuropa, sommartid
+"race_time_with_track validates sizes and event names" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/28 Testing: race_time_with_pits_under: SC/VSC lane factors reduce loss
+21/28 Test: race_time_with_pits_under: SC/VSC lane factors reduce loss
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "race_time_with_pits_under: SC/VSC lane factors reduce loss"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"race_time_with_pits_under: SC/VSC lane factors reduce loss" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "race_time_with_pits_under: SC/VSC lane factors reduce loss"
+Randomness seeded to: 1148618112
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"race_time_with_pits_under: SC/VSC lane factors reduce loss" end time: Sep 10 22:11 Västeuropa, sommartid
+"race_time_with_pits_under: SC/VSC lane factors reduce loss" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/28 Testing: race_time: invalid sizes are rejected
+22/28 Test: race_time: invalid sizes are rejected
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "race_time: invalid sizes are rejected"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"race_time: invalid sizes are rejected" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "race_time: invalid sizes are rejected"
+Randomness seeded to: 88574084
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"race_time: invalid sizes are rejected" end time: Sep 10 22:11 Västeuropa, sommartid
+"race_time: invalid sizes are rejected" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/28 Testing: simulate_pit_events is deterministic with same seed
+23/28 Test: simulate_pit_events is deterministic with same seed
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "simulate_pit_events is deterministic with same seed"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"simulate_pit_events is deterministic with same seed" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "simulate_pit_events is deterministic with same seed"
+Randomness seeded to: 3176156446
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"simulate_pit_events is deterministic with same seed" end time: Sep 10 22:11 Västeuropa, sommartid
+"simulate_pit_events is deterministic with same seed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/28 Testing: race_time: sum of pure stints
+24/28 Test: race_time: sum of pure stints
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "race_time: sum of pure stints"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"race_time: sum of pure stints" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "race_time: sum of pure stints"
+Randomness seeded to: 266423159
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"race_time: sum of pure stints" end time: Sep 10 22:11 Västeuropa, sommartid
+"race_time: sum of pure stints" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/28 Testing: load_track_catalog_csv returns nullopt on missing file
+25/28 Test: load_track_catalog_csv returns nullopt on missing file
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "load_track_catalog_csv returns nullopt on missing file"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"load_track_catalog_csv returns nullopt on missing file" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "load_track_catalog_csv returns nullopt on missing file"
+Randomness seeded to: 3038387757
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"load_track_catalog_csv returns nullopt on missing file" end time: Sep 10 22:11 Västeuropa, sommartid
+"load_track_catalog_csv returns nullopt on missing file" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/28 Testing: SimServer advances along a circle and wraps laps
+26/28 Test: SimServer advances along a circle and wraps laps
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "SimServer advances along a circle and wraps laps"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"SimServer advances along a circle and wraps laps" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "SimServer advances along a circle and wraps laps"
+Randomness seeded to: 1045125019
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"SimServer advances along a circle and wraps laps" end time: Sep 10 22:11 Västeuropa, sommartid
+"SimServer advances along a circle and wraps laps" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/28 Testing: InterpBuffer requires at least one snapshot
+27/28 Test: InterpBuffer requires at least one snapshot
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "InterpBuffer requires at least one snapshot"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"InterpBuffer requires at least one snapshot" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "InterpBuffer requires at least one snapshot"
+Randomness seeded to: 401495999
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"InterpBuffer requires at least one snapshot" end time: Sep 10 22:11 Västeuropa, sommartid
+"InterpBuffer requires at least one snapshot" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/28 Testing: track_catalog_from_csv_stream handles spaces, comments and bad rows
+28/28 Test: track_catalog_from_csv_stream handles spaces, comments and bad rows
+Command: "E:/Code/cpp/RaceManager/build/tests/Debug/f1tm_tests.exe" "track_catalog_from_csv_stream handles spaces\, comments and bad rows"
+Directory: E:/Code/cpp/RaceManager/build/tests
+"track_catalog_from_csv_stream handles spaces, comments and bad rows" start time: Sep 10 22:11 Västeuropa, sommartid
+Output:
+----------------------------------------------------------
+Filters: "track_catalog_from_csv_stream handles spaces\, comments and bad rows"
+Randomness seeded to: 2981435443
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"track_catalog_from_csv_stream handles spaces, comments and bad rows" end time: Sep 10 22:11 Västeuropa, sommartid
+"track_catalog_from_csv_stream handles spaces, comments and bad rows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 10 22:11 Västeuropa, sommartid

@@ -1,0 +1,10 @@
+^E:\CODE\CPP\RACEMANAGER\BUILD\_DEPS\CATCH2-SUBBUILD\CMAKEFILES\3947C610792DF92978C59FCE7649586E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Code/cpp/RaceManager/build/_deps/catch2-subbuild -BE:/Code/cpp/RaceManager/build/_deps/catch2-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/catch2-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

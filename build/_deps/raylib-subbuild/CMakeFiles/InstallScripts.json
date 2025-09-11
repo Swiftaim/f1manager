@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/Code/cpp/RaceManager/build/_deps/raylib-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

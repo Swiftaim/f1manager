@@ -1,0 +1,50 @@
+stateDiagram
+  [*] --> PreSeason
+  PreSeason --> RaceWeek
+  RaceWeek --> MidSeason
+  MidSeason --> RaceWeek
+  MidSeason --> SeasonEnd
+  SeasonEnd --> PreSeason
+
+  state RaceWeek {
+    [*] --> Practice
+    Practice --> Quali
+    Quali --> Race
+    Race --> PostRace
+    PostRace --> [*]
+
+    state Race {
+      [*] --> Formation
+      Formation --> Green
+      Green --> Live
+      Live --> Decide
+      Decide --> Live
+      Decide --> Pit
+      Pit --> Live
+      Decide --> Pace
+      Pace --> Live
+      Live --> Event
+      Event --> Decide
+      Live --> Retire
+      Retire --> [*]
+      Live --> Checkered
+      Checkered --> [*]
+    }
+  }
+
+  state MidSeason {
+    [*] --> Plan
+    Plan --> RnD
+    RnD --> Staff
+    Staff --> Sponsors
+    Sponsors --> [*]
+  }
+
+  state SeasonEnd {
+    [*] --> FinalScore
+    FinalScore --> Contracts
+    Contracts --> Regulations
+    Regulations --> NextSeason
+    Regulations --> [*]
+    NextSeason --> [*]
+  }

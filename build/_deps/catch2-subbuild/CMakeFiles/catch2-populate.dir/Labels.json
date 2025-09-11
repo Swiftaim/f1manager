@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/3947c610792df92978c59fce7649586e/catch2-populate.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/d34c30db8e0138beba73a8ee5c364ecc/catch2-populate-complete.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-build.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-configure.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-download.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-install.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-patch.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-test.rule"
+		},
+		{
+			"file" : "E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/8a6bd6f133c6b56882b2f1036c3498c2/catch2-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"catch2-populate"
+		],
+		"name" : "catch2-populate"
+	}
+}

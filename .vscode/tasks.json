@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CTest (Release)",
+      "type": "shell",
+      "command": "ctest --test-dir build --config Release --output-on-failure",
+      "problemMatcher": []
+    }
+  ]
+}

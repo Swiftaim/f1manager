@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.1/Modules/CPack.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CPackComponent.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-4.1/Templates/CPackConfig.cmake.in
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/CompileDefinitions.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/GlfwImport.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/InstallConfigurations.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/JoinPaths.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/LibraryConfigurations.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/LibraryPathToLinkerFlags.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/PackConfigurations.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/PopulateConfigVariablesLocally.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/cmake/raylib-config-version.cmake
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/raylib.pc.in
+E:/Code/cpp/RaceManager/build/_deps/raylib-src/src/CMakeLists.txt

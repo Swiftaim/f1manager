@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.1/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CTestTargets.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/DartConfiguration.tcl.in
+C:/Program Files/CMake/share/cmake-4.1/Templates/CTestScript.cmake.in
+E:/Code/cpp/RaceManager/build/_deps/catch2-src/extras/Catch.cmake
+E:/Code/cpp/RaceManager/tests/CMakeLists.txt

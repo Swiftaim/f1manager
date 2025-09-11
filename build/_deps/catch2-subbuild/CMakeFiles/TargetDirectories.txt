@@ -1,0 +1,3 @@
+E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
+E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/ALL_BUILD.dir
+E:/Code/cpp/RaceManager/build/_deps/catch2-subbuild/CMakeFiles/ZERO_CHECK.dir

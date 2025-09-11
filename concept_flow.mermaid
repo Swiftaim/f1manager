@@ -1,0 +1,37 @@
+flowchart LR
+  subgraph SEASON [SeasonLoop]
+    A[PreSeason]
+    B[WeekPrep]
+    P[PreRace]
+
+    subgraph RACE [RaceLoop]
+      RS[RaceStart]
+      LDF[LiveData]
+      D{Decide}
+      E[Continue]
+      U[Event]
+      RE[RaceEnd]
+
+      RS --> LDF
+      LDF --> D
+      D --> E
+      D --> LDF
+      LDF --> U
+      U --> D
+      E --> LDF
+      E --> RE
+    end
+
+    C[PostRace]
+    M[MidSeason]
+    S[SeasonEnd]
+  end
+
+  A --> B
+  B --> P
+  P --> RS
+  RE --> C
+  C --> M
+  M --> B
+  M --> S
+  S --> A

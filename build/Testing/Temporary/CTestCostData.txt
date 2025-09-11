@@ -1,0 +1,29 @@
+estimate_stint_time 8 0.000835025
+pit_stop_loss 7 0.000988229
+pit_stop_loss stochastic variance 6 0.00115477
+load_track_catalog_csv returns nullopt on missing file 5 0.0013131
+track_catalog_from_csv_stream parses valid rows 5 0.0012864
+race_time_with_track validates sizes and event names 5 0.0015264
+race_time_with_track composes stints and track pits with events 5 0.00131112
+lane_factors_from_events maps events via Track 5 0.00132624
+race_time_with_pits_under: SC/VSC lane factors reduce loss 5 0.0012575
+SimServer advances along a circle and wraps laps 5 0.00128814
+race_time: sum of pure stints 5 0.0013549
+Track: lookup and pit helpers 5 0.00137478
+simulate_pit_events is deterministic with same seed 5 0.0012864
+simulate_lane_factors matches mapping via lane_factors_from_events 5 0.0013286
+simulate_pit_events changes with different seeds 5 0.00132734
+simulate_pit_events handles edges 5 0.0012973
+race_time: invalid sizes are rejected 5 0.00131762
+Track: unknown key returns nullopt 5 0.00127434
+pit_stop_loss under SC and VSC 5 0.00134796
+race_time_with_pits: adds pit loss between stints 5 0.00144352
+track_catalog_from_csv_stream handles spaces, comments and bad rows 5 0.00131222
+SnapshotBuffer publishes and consumes latest 4 0.0019256
+InterpBuffer clamps outside range 3 0.00215107
+InterpBuffer requires at least one snapshot 3 0.00213947
+InterpBuffer shortest-angle wrap around 2pi 3 0.0022436
+InterpBuffer linear interpolation by sim_time 3 0.00223557
+Pause (scale 0) yields no advancement 2 0.00321615
+Time warp scales advancement linearly 2 0.0034319
+---

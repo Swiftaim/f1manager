@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\a1f45fbe8ff663106628c30ec089b4ff\raylib-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\6ef2a16125525d17b5f00fc334f73db5\raylib-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\91b122663bd89ee0906c85532521037d\raylib-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Code\cpp\RaceManager\build\_deps\raylib-subbuild\CMakeFiles\raylib-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{331F6C67-4E35-39D1-B7A6-D3971594AABA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

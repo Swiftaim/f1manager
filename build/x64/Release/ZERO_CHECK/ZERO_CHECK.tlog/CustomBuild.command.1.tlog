@@ -1,0 +1,10 @@
+^E:\CODE\CPP\RACEMANAGER\BUILD\CMAKEFILES\EC40D55200C1ADB61E5AF3A21FC78F2F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Code/cpp/RaceManager -BE:/Code/cpp/RaceManager/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Code/cpp/RaceManager/build/f1tm.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
