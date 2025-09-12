@@ -26,19 +26,24 @@ TrackPath SimRunner::make_preset_(TrackPreset p) {
     case TrackPreset::Stadium:
       return TrackPath::Stadium(/*straight_len*/ 250.0, /*radius*/ 80.0, /*arc detail*/ 14);
     case TrackPreset::ChicaneHairpin: {
-      // Build a simple GP-like: short straight -> chicane -> long straight -> hairpin
-      std::vector<Vec2> pts;
-      auto add = [&](double x, double y){ pts.push_back({x,y}); };
-      // Start near right side, CCW
-      add( 150, -60); add(150, 60);    // right arc-ish vertical
+      // Control polygon describing the general shape (closed loop, rough corners)
+      std::vector<Vec2> ctrl;
+      auto add = [&](double x, double y){ ctrl.push_back({x,y}); };
+
+      // A compact GP-like shape: right vertical -> chicane -> long top -> hairpin -> bottom return
+      add( 150, -60); add(150,  60);   // right side
       add(  40,  80); add(-10,  60);   // chicane in
       add( -40,  30); add(-120, 30);   // top straight
-      add(-150,   0); add(-140, -50);  // hairpin approach
-      add(-120, -90); add(-60, -100);  // hairpin exit
-      add(  40, -90); add(110, -80);   // back to start
-      if (pts.front().x != pts.back().x || pts.front().y != pts.back().y) pts.push_back(pts.front());
-      return TrackPath{std::move(pts)};
+      add(-160,   0); add(-150, -60);  // hairpin approach
+      add(-120, -100); add(-60, -110); // hairpin exit
+      add(  40, -90); add(120, -80);   // back to start
+
+      // Build a smooth closed path from control points.
+      // Increase samples_per_seg for even smoother corners.
+      const int samples_per_seg = 28;
+      return TrackPath::FromClosedCatmullRom(ctrl, samples_per_seg);
     }
+
     default:
       return TrackPath::Stadium(250.0, 80.0, 14);
   }

@@ -182,7 +182,8 @@ void ViewerApp::render_frame_() {
     Vector2 tailL = { pos.x - c*len + s*wid,  pos.y + s*len + c*wid };
     Vector2 tailR = { pos.x - c*len - s*wid,  pos.y + s*len - c*wid };
     DrawTriangle(nose, tailL, tailR, colorFor(car.id));
-    DrawCircleV(pos, 2.0f, Color{255,255,255,200});
+    DrawCircleV(pos, 3.0f, colorFor(car.id));   // small colored marker at car center
+
   }
 
   draw_dashboard_(draw);
@@ -312,8 +313,31 @@ void ViewerApp::draw_dashboard_(const SimSnapshot& draw) {
   DrawRectangle(x0, y0, box_w, box_h, Color{24,24,28,220});
   DrawLine(x0, y0 + pad + row_h, x0 + box_w, y0 + pad + row_h, Color{60,60,70,255});
 
-  DrawText("Pos  ID   Lap    Gap     Last       Best      S1       S2       S3",
-           x0 + pad, y0 + pad - 2, 16, Color{220,220,230,255});
+  const Color hdr = Color{220,220,230,255};
+
+  // Column x-positions (must match row draws below)
+  const int X_POS  = x0 + pad + 0;
+  const int X_ID   = x0 + pad + 42;
+  const int X_LAP  = x0 + pad + 92;
+  const int X_GAP  = x0 + pad + 148;
+  const int X_LAST = x0 + pad + 210;
+  const int X_BEST = x0 + pad + 300;
+  const int X_S1   = x0 + pad + 392;
+  const int X_S2   = x0 + pad + 472;
+  const int X_S3   = x0 + pad + 552;
+
+  // Draw headers aligned to columns
+  DrawText("Pos",  X_POS,  y0 + pad - 2, 16, hdr);
+  DrawText("ID",   X_ID,   y0 + pad - 2, 16, hdr);
+  DrawText("Lap",  X_LAP,  y0 + pad - 2, 16, hdr);
+  DrawText("Gap",  X_GAP,  y0 + pad - 2, 16, hdr);
+  DrawText("Last", X_LAST, y0 + pad - 2, 16, hdr);
+  DrawText("Best", X_BEST, y0 + pad - 2, 16, hdr);
+  DrawText("S1",   X_S1,   y0 + pad - 2, 16, hdr);
+  DrawText("S2",   X_S2,   y0 + pad - 2, 16, hdr);
+  DrawText("S3",   X_S3,   y0 + pad - 2, 16, hdr);
+
+
 
   int y = y0 + pad + row_h + 2;
   int pos = 1;

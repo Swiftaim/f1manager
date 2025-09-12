@@ -91,7 +91,57 @@ public:
     return TrackPath{std::move(pts)};
   }
 
+  // Build a smooth, closed track from control points using a uniform Catmull–Rom spline.
+  // - ctrl: control polygon (closed; if not closed, we treat it as closed by wrapping)
+  // - samples_per_seg: how many segments to generate between each pair of control points
+  static TrackPath FromClosedCatmullRom(const std::vector<Vec2>& ctrl, int samples_per_seg = 24) {
+    std::vector<Vec2> pts;
+    const std::size_t n = ctrl.size();
+    if (n < 3) return TrackPath{}; // need at least 3 points to get a curve
+
+    // Treat as closed: wrap indices
+    auto at = [&](std::ptrdiff_t i)->const Vec2& {
+      std::ptrdiff_t k = (i % (std::ptrdiff_t)n + (std::ptrdiff_t)n) % (std::ptrdiff_t)n;
+      return ctrl[(std::size_t)k];
+    };
+
+    // For each segment P1->P2, sample [0,1)
+    for (std::size_t i = 0; i < n; ++i) {
+      const Vec2& P0 = at((std::ptrdiff_t)i - 1);
+      const Vec2& P1 = at((std::ptrdiff_t)i + 0);
+      const Vec2& P2 = at((std::ptrdiff_t)i + 1);
+      const Vec2& P3 = at((std::ptrdiff_t)i + 2);
+
+      for (int s = 0; s < samples_per_seg; ++s) {
+        double u = double(s) / double(samples_per_seg); // [0,1)
+        pts.push_back(catmullRom_(P0, P1, P2, P3, u));
+      }
+    }
+    // let set_points() close the loop by repeating the first point at the end
+    return TrackPath{std::move(pts)};
+  }
+
 private:
+  // Uniform Catmull–Rom (C1 continuous), stable and simple.
+  static Vec2 catmullRom_(const Vec2& P0, const Vec2& P1, const Vec2& P2, const Vec2& P3, double u) {
+    const double u2 = u*u;
+    const double u3 = u2*u;
+    // Basis matrix (0.5 * [ -1  3 -3  1;  2 -5  4 -1; -1  0  1  0;  0  2  0  0 ]) applied to [P0 P1 P2 P3]
+    const double a0x = -P0.x + 3.0*P1.x - 3.0*P2.x + P3.x;
+    const double a0y = -P0.y + 3.0*P1.y - 3.0*P2.y + P3.y;
+    const double a1x =  2.0*P0.x - 5.0*P1.x + 4.0*P2.x - P3.x;
+    const double a1y =  2.0*P0.y - 5.0*P1.y + 4.0*P2.y - P3.y;
+    const double a2x = -P0.x + P2.x;
+    const double a2y = -P0.y + P2.y;
+    const double a3x =  2.0*P1.x;
+    const double a3y =  2.0*P1.y;
+
+    return Vec2{
+      0.5*(a0x*u3 + a1x*u2 + a2x*u + a3x),
+      0.5*(a0y*u3 + a1y*u2 + a2y*u + a3y)
+    };
+  }
+
   void build_cumulative_() {
     cum_.resize(pts_.size());
     cum_[0] = 0.0;
