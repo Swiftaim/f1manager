@@ -1,56 +1,35 @@
 #pragma once
 #include <atomic>
-#include <condition_variable>
 #include <cstdint>
-#include <mutex>
 #include <optional>
-#include <chrono>
-#include <f1tm/snap.hpp>
 
 namespace f1tm {
 
-// Minimal, safe single-producer single-consumer snapshot buffer.
-// Writer calls publish(); Reader calls try_consume_latest() or wait_for_new().
-class SnapshotBuffer {
- public:
-  void publish(const SimSnapshot& s) {
-    {
-      std::lock_guard<std::mutex> g(mu_);
-      latest_ = s;
-      seq_++;
+// Single-producer single-consumer latest-only snapshot buffer.
+template <class T>
+class LatestBuffer {
+public:
+  void publish(const T& v) {
+    // Copy into the slot then bump the sequence.
+    data_ = v;
+    seq_.fetch_add(1, std::memory_order_release);
+  }
+
+  // Try to consume if sequence advanced past cursor.
+  bool try_consume_latest(std::uint64_t& cursor, T& out) const {
+    const auto s = seq_.load(std::memory_order_acquire);
+    if (s != cursor) {
+      out = data_;
+      cursor = s;
+      return true;
     }
-    cv_.notify_all();
+    return false;
   }
-
-  // Non-blocking: returns true if a newer snapshot than 'cursor' was copied into 'out'.
-  bool try_consume_latest(uint64_t& cursor, SimSnapshot& out) {
-    uint64_t current = seq_.load(std::memory_order_acquire);
-    if (current == cursor) return false;          // no new data
-    {
-      std::lock_guard<std::mutex> g(mu_);
-      out = latest_;                              // copy small POD
-      cursor = seq_.load(std::memory_order_relaxed);
-    }
-    return true;
-  }
-
-  // Blocking wait (with timeout). Returns true if new snapshot copied into 'out'.
-  template <class Rep, class Period>
-  bool wait_for_new(uint64_t& cursor, SimSnapshot& out,
-                    const std::chrono::duration<Rep,Period>& timeout) {
-    std::unique_lock<std::mutex> lk(mu_);
-    bool got = cv_.wait_for(lk, timeout, [&]{ return seq_.load() != cursor; });
-    if (!got) return false;
-    out = latest_;
-    cursor = seq_.load(std::memory_order_relaxed);
-    return true;
-  }
-
- private:
-  std::mutex mu_;
-  std::condition_variable cv_;
-  SimSnapshot latest_{};
-  std::atomic<uint64_t> seq_{0};
+private:
+  mutable T data_{};
+  std::atomic<std::uint64_t> seq_{0};
 };
+
+using SnapshotBuffer = LatestBuffer<struct SimSnapshot>;
 
 } // namespace f1tm

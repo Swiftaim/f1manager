@@ -1,0 +1,13 @@
+--- apps/viewer/main.cpp (M1 changes) ---
+// Inside the server thread setup, replace previous single-car init:
+//   sim.car.speed_mps  = 70.0;
+// with:
+    sim.add_car(0, 70.0, 0.0);   // primary car id=0
+
+// In the publish block, replace direct access to sim.car with car0 via index 0:
+    const auto* car0 = sim.car_by_index(0);
+    s.s = car0 ? car0->s : 0.0;
+    s.lap = car0 ? car0->laps : 0ull;
+
+// And for pose, you can keep:
+    sim.sample_pose(x, y, heading); // this samples car index 0 by default

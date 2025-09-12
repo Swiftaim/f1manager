@@ -1,0 +1,29 @@
+F1TM Sync Pack (Gap to Leader + Sector Splits)
+==============================================
+This archive contains authoritative versions of the files you need to get back in sync.
+
+Files:
+- include/f1tm/track_geom.hpp
+- include/f1tm/sim.hpp
+- src/sim.cpp
+- include/f1tm/sim_runner.hpp
+- src/sim_runner.cpp
+- include/f1tm/viewer/app.hpp
+- src/viewer/app.cpp
+- include/f1tm/snap.hpp
+- include/f1tm/interp.hpp
+- include/f1tm/telemetry.hpp
+- tools/cpp.py
+- tools/cpp.cmd
+
+How to apply:
+1) Extract this zip at the ROOT of your repo, allowing it to overwrite existing files.
+2) Clean/rebuild:
+   - Delete your build/ folder (optional but recommended after big header changes)
+   - Run:  py tools\cpp.py build
+   - Run:  py tools\cpp.py run
+3) Controls:
+   Space pause, 1..5 warp, W/S or +/- zoom
+   Arrows pan, C center, N cars (1/2/4/8), T track
+
+If anything still fails to compile, please copy-paste the first failing error so I can fix fast.

@@ -4,11 +4,34 @@
     <ClCompile Include="E:\Code\cpp\RaceManager\apps\viewer\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\Code\cpp\RaceManager\src\viewer\app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Code\cpp\RaceManager\src\sim_runner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Code\cpp\RaceManager\src\sim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\Code\cpp\RaceManager\include\f1tm\viewer\app.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Code\cpp\RaceManager\include\f1tm\sim_runner.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Code\cpp\RaceManager\include\f1tm\sim.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\Code\cpp\RaceManager\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3EC43EAB-8E35-3F51-AA8D-7003FF7B5176}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{86FF5D2B-A04E-3C9C-AE39-A2D01C1FF940}</UniqueIdentifier>
     </Filter>

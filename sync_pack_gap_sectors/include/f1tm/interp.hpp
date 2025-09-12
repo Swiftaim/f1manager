@@ -13,8 +13,6 @@ namespace f1tm {
 
 class InterpBuffer {
 public:
-  static constexpr std::size_t kMaxCap = 128;
-
   explicit InterpBuffer(std::size_t cap = 64)
     : cap_(cap <= kMaxCap ? cap : kMaxCap) {}
 
@@ -86,18 +84,20 @@ public:
         cp.s  = lerp(ca.s, cb.s, t);
         cp.heading_rad = lerp_angle_shortest(ca.heading_rad, cb.heading_rad, t);
         cp.lap = (t < 1.0 ? ca.lap : cb.lap);
-
+        // Telemetry propagation
         const bool newer_is_b = (t >= 0.5);
         const auto& newer = newer_is_b ? cb : ca;
-
-        // Telemetry propagation
         cp.last_lap_time = newer.last_lap_time;
+        // best = min if both known else known
         cp.best_lap_time = combine_min_(ca.best_lap_time, cb.best_lap_time);
 
         cp.gap_to_leader_m = newer.gap_to_leader_m;
         cp.gap_to_leader_s = newer.gap_to_leader_s;
 
-        cp.s1_last = newer.s1_last; cp.s2_last = newer.s2_last; cp.s3_last = newer.s3_last;
+        cp.s1_last = newer.s1_last;
+        cp.s2_last = newer.s2_last;
+        cp.s3_last = newer.s3_last;
+
         cp.s1_best = combine_min_(ca.s1_best, cb.s1_best);
         cp.s2_best = combine_min_(ca.s2_best, cb.s2_best);
         cp.s3_best = combine_min_(ca.s3_best, cb.s3_best);
@@ -133,6 +133,8 @@ public:
   }
 
 private:
+  static constexpr std::size_t kMaxCap = 128;
+
   static double lerp(double a, double b, double t) { return a + (b - a) * t; }
   static double combine_min_(double a, double b) {
     if (a < 0.0) return b;
@@ -168,14 +170,11 @@ private:
     return static_cast<std::size_t>(size_ % static_cast<std::uint64_t>(cap_));
   }
   std::size_t current_size() const {
-    const std::uint64_t cap64 = static_cast<std::uint64_t>(cap_);
+    const std::uint64_t cap64 = static_cast<std::uint64_t>(kMaxCap);
     const std::uint64_t used  = (size_ < cap64) ? size_ : cap64;
     return static_cast<std::size_t>(used);
   }
 
-  // Capacity (<= kMaxCap)
-  std::size_t cap_;
-  // Ring buffer
   std::array<SimSnapshot, kMaxCap> buf_{};
   std::uint64_t size_{0};
 };

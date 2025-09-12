@@ -3,20 +3,24 @@
 
 using namespace f1tm;
 
-TEST_CASE("SimServer advances along a circle and wraps laps") {
+TEST_CASE("SimServer advances along a circle and wraps laps (single car via add_car)") {
   SimServer sim;
   sim.track.radius_m = 10.0;          // circumference ≈ 62.8319 m
-  sim.car.speed_mps = 10.0;           // 10 m/s
+  sim.add_car(0, 10.0, 0.0);          // id=0, 10 m/s
+
   const double C = sim.track.circumference_m();
   REQUIRE(C > 0.0);
 
   // Step exactly one lap worth of time
-  const double lap_time = C / sim.car.speed_mps;
-  double dt = lap_time / 10.0;        // 10 fixed steps
+  const double lap_time = C / 10.0;   #ifdef _MSC_VER
+  (void)lap_time;
+  #endif
+  double dt = (C / 10.0) / 10.0;      // 10 fixed steps
   for (int i = 0; i < 10; ++i) sim.step(dt);
 
-  // We should be back near s ≈ 0 with 1 lap completed
-  REQUIRE(sim.car.laps == 1);
-  REQUIRE(sim.car.s >= 0.0);
-  REQUIRE(sim.car.s < C);
+  const auto* car0 = sim.car_by_index(0);
+  REQUIRE(car0 != nullptr);
+  REQUIRE(car0->laps == 1);
+  REQUIRE(car0->s >= 0.0);
+  REQUIRE(car0->s < C);
 }
