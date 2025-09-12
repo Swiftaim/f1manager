@@ -29,3 +29,12 @@ CTestTestfile.cmake
 # OS
 .DS_Store
 Thumbs.db
+build/ALL_BUILD.vcxproj
+build/ALL_BUILD.vcxproj
+build/ALL_BUILD.vcxproj
+build/CMakeCache.txt
+build/f1tm_app.vcxproj
+build/f1tm_core.vcxproj
+build/ZERO_CHECK.vcxproj
+build/_deps/raylib-build/ALL_BUILD.vcxproj
+build/_deps/raylib-build/uninstall.vcxproj
