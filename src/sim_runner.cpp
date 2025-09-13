@@ -22,14 +22,17 @@ static std::vector<double> grid_s_positions_(std::size_t n, double circumference
 }
 
 TrackPath SimRunner::make_preset_(TrackPreset p) {
+  // Control polygon describing the general shape (closed loop, rough corners)
+  std::vector<Vec2> ctrl;
+  auto add = [&](double x, double y){ ctrl.push_back({x,y}); };
+  
+  // Increase samples_per_seg for even smoother corners.
+  int samples_per_seg = 28;
+
   switch (p) {
     case TrackPreset::Stadium:
       return TrackPath::Stadium(/*straight_len*/ 250.0, /*radius*/ 80.0, /*arc detail*/ 14);
-    case TrackPreset::ChicaneHairpin: {
-      // Control polygon describing the general shape (closed loop, rough corners)
-      std::vector<Vec2> ctrl;
-      auto add = [&](double x, double y){ ctrl.push_back({x,y}); };
-
+    case TrackPreset::ChicaneHairpin: {  
       // A compact GP-like shape: right vertical -> chicane -> long top -> hairpin -> bottom return
       add( 150, -60); add(150,  60);   // right side
       add(  40,  80); add(-10,  60);   // chicane in
@@ -39,10 +42,62 @@ TrackPath SimRunner::make_preset_(TrackPreset p) {
       add(  40, -90); add(120, -80);   // back to start
 
       // Build a smooth closed path from control points.
-      // Increase samples_per_seg for even smoother corners.
-      const int samples_per_seg = 28;
       return TrackPath::FromClosedCatmullRom(ctrl, samples_per_seg);
     }
+
+    case TrackPreset::GPVaried: {      
+      // Bottom straight into braking
+      add( 200, -100);
+      add( 220,  -40);
+
+      // Flowing Esses (right-left-right-left)
+      add( 180,   20);
+      add( 120,   60);
+      add(  60,  100);
+      add(   0,   60);
+      add( -60,   20);
+      add(-120,   50);
+
+      // Carousel (sweeping, sustained corner on the left)
+      add(-180,   40);
+      add(-220,    0);
+      add(-200,  -60);
+      add(-140, -120);
+      add( -60, -150);
+      add(  40, -140);
+      add( 120, -120);
+      add( 180,  -110);
+      add( 200,  -100);
+
+      // Build smooth closed curve; raise samples for even rounder corners
+      samples_per_seg = 30;
+      return TrackPath::FromClosedCatmullRom(ctrl, samples_per_seg);
+    }
+
+    case TrackPreset::GPCustom: {
+      // A compact GP-like shape: right vertical -> chicane -> long top -> hairpin -> bottom return
+      add( 150, -60); add(220,  60);   // right side
+      add( 160, 60); add(100,  60);   // top-right
+      add(  60,  60); add(50,  20);   // down loop
+      add(  100, 0); add(140,  0);   // chicane right
+      add(  160,  -20); add(160,  -40);   // chicane down
+      add(  120,  -60); add(80,  -60);   // chicane left
+      add(  40,  -60); add(40,  -40);   // chicane left
+      add(  20,  -40); add(0,  -20);   // chicane left
+      add(  0,  0); add(20,  20);   // chicane left
+      add(  60,  20); add(60,  60);   // chicane up
+      add( -40,  50); add(-120, 40);   // top straight
+      add(-160,   0); add(-150, -60);  // hairpin approach
+      add(-120, -100); add(-60, -110); // hairpin exit
+      add(  40, -90); add(120, -80);   // back to start
+
+      // Build a smooth closed path from control points.
+      return TrackPath::FromClosedCatmullRom(ctrl, samples_per_seg);
+      // Build smooth closed curve; raise samples for even rounder corners
+      samples_per_seg = 24;
+      return TrackPath::FromClosedCatmullRom(ctrl, samples_per_seg);
+    }
+
 
     default:
       return TrackPath::Stadium(250.0, 80.0, 14);
@@ -51,8 +106,9 @@ TrackPath SimRunner::make_preset_(TrackPreset p) {
 
 const char* SimRunner::preset_name() const {
   switch (preset_) {
-    case TrackPreset::Stadium: return "Stadium";
+    case TrackPreset::Stadium:        return "Stadium";
     case TrackPreset::ChicaneHairpin: return "Chicane+Hairpin";
+    case TrackPreset::GPVaried:       return "GP Varied (Esses+Carousel)"; // NEW
     default: return "Unknown";
   }
 }

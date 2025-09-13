@@ -11,9 +11,11 @@
 
 namespace f1tm {
 
-enum class TrackPreset : int {
+enum class TrackPreset {
   Stadium = 0,
   ChicaneHairpin = 1,
+  GPVaried = 2,          // NEW: flowing esses + carousel
+  GPCustom = 3,         // custom user-defined
   Count
 };
 
