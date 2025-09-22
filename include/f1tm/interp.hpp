@@ -56,6 +56,13 @@ public:
     out.sim_time = A.sim_time + (B.sim_time - A.sim_time) * t;
     out.tick     = (t < 1.0 ? A.tick : B.tick);
 
+    // Primary (back-compat) fields interpolate even if no car poses are present
+    out.x = lerp(A.x, B.x, t);
+    out.y = lerp(A.y, B.y, t);
+    out.s = lerp(A.s, B.s, t);
+    out.heading_rad = lerp_angle_shortest(A.heading_rad, B.heading_rad, t);
+    out.lap = (t < 1.0 ? A.lap : B.lap);
+
     // Build car id set
     std::unordered_map<CarId, CarPose> a_map;
     std::unordered_map<CarId, CarPose> b_map;
@@ -119,9 +126,6 @@ public:
       out.s = primary->s;
       out.lap = primary->lap;
       out.heading_rad = primary->heading_rad;
-    } else {
-      out.x = out.y = out.s = out.heading_rad = 0.0;
-      out.lap = 0;
     }
 
     return true;

@@ -12,8 +12,9 @@ TEST_CASE("SimServer advances along a circle and wraps laps (single car via add_
   REQUIRE(C > 0.0);
 
   // Step exactly one lap worth of time
-  const double lap_time = C / 10.0;   #ifdef _MSC_VER
-  (void)lap_time;
+  const double lap_time = C / 10.0;
+  #ifdef _MSC_VER
+    (void)lap_time;
   #endif
   double dt = (C / 10.0) / 10.0;      // 10 fixed steps
   for (int i = 0; i < 10; ++i) sim.step(dt);
