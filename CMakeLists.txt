@@ -12,13 +12,25 @@ endif()
 include(FetchContent)
 
 # --- Raylib (graphics)
-FetchContent_Declare(
-  raylib
-  GIT_REPOSITORY https://github.com/raysan5/raylib.git
-  GIT_TAG 5.5
-)
-set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(raylib)
+if (APPLE)
+  find_package(raylib CONFIG REQUIRED)
+  if (TARGET raylib::raylib)
+    set(F1TM_RAYLIB_TARGET raylib::raylib)
+  elseif (TARGET raylib)
+    set(F1TM_RAYLIB_TARGET raylib)
+  else()
+    message(FATAL_ERROR "raylib package found but no usable target exposed")
+  endif()
+else()
+  FetchContent_Declare(
+    raylib
+    GIT_REPOSITORY https://github.com/raysan5/raylib.git
+    GIT_TAG 5.5
+  )
+  set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+  FetchContent_MakeAvailable(raylib)
+  set(F1TM_RAYLIB_TARGET raylib)
+endif()
 
 # Catch2
 FetchContent_Declare(
