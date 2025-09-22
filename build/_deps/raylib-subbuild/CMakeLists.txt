@@ -18,18 +18,18 @@ project(raylib-populate NONE)
 
 # Pass through things we've already detected in the main project to avoid
 # paying the cost of redetecting them again in ExternalProject_Add()
-set(GIT_EXECUTABLE [==[C:/Program Files/Git/cmd/git.exe]==])
-set(GIT_VERSION_STRING [==[2.47.1.windows.1]==])
+set(GIT_EXECUTABLE [==[/usr/bin/git]==])
+set(GIT_VERSION_STRING [==[2.50.1 (Apple Git-155)]==])
 set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[C:/Program Files/Git/cmd/git.exe;2.47.1.windows.1]==]
+  [==[/usr/bin/git;2.50.1 (Apple Git-155)]==]
 )
 
 
 include(ExternalProject)
 ExternalProject_Add(raylib-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/raysan5/raylib.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "5.5"
-                    SOURCE_DIR          "E:/Code/cpp/RaceManager/build/_deps/raylib-src"
-                    BINARY_DIR          "E:/Code/cpp/RaceManager/build/_deps/raylib-build"
+                    SOURCE_DIR          "/Users/david/Dev/cpp/f1manager/build/_deps/raylib-src"
+                    BINARY_DIR          "/Users/david/Dev/cpp/f1manager/build/_deps/raylib-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
